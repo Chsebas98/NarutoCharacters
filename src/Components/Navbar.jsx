@@ -1,11 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useHistory } from "react-router-dom";
 
 const Navbar = () => {
+  const history = useHistory();
+  const handleLogout = () => {
+    history.replace("/login");
+  };
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="#">
+        <Link className="navbar-brand" to="/man">
           <img
             src="/assets/sharinga.png"
             alt=""
@@ -27,23 +31,33 @@ const Navbar = () => {
           <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="#">
+              <NavLink className="nav-link" aria-current="page" to="/man">
                 Hombres
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="#">
+              <NavLink className="nav-link" to="/womens">
                 Mujeres
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="#">
+              <NavLink className="nav-link" to="/bijus">
+                Biju
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/search">
                 Buscar
-              </Link>
+              </NavLink>
             </li>
           </ul>
+          <div className="d-flex ">
+            <button className="btn btn-danger" onClick={handleLogout}>
+              Cerrar Sesión
+            </button>
+          </div>
         </div>
       </div>
     </nav>
