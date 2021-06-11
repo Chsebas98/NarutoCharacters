@@ -1,5 +1,5 @@
 export const Characters = [
-  { id: "1", name: "A", description: "Tercer Raikage", type: "h" },
+  { id: "1", name: "A Tercero", description: "Tercer Raikage", type: "h" },
   { id: "2", name: "A", description: "Cuarto Raikage", type: "h", img: "" },
   { id: "3", name: "Boruto Uzumaki", description: "Hijo de Naruto", type: "h" },
   {

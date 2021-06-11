@@ -33,22 +33,39 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <NavLink className="nav-link" aria-current="page" to="/man">
+              <NavLink
+                className="nav-link"
+                aria-current="page"
+                to="/man"
+                activeStyle={{ fontWeight: "bold", color: "#941133" }}
+              >
                 Hombres
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/womens">
+              <NavLink
+                className="nav-link"
+                to="/womens"
+                activeStyle={{ fontWeight: "bold", color: "#941133" }}
+              >
                 Mujeres
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/bijus">
+              <NavLink
+                className="nav-link"
+                to="/bijus"
+                activeStyle={{ fontWeight: "bold", color: "#941133" }}
+              >
                 Biju
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/search">
+              <NavLink
+                className="nav-link"
+                to="/search"
+                activeStyle={{ fontWeight: "bold", color: "#941133" }}
+              >
                 Buscar
               </NavLink>
             </li>

@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "../Components/Card";
 import { Characters } from "../Models/Characters";
 
 const ManScreen = () => {
@@ -9,7 +10,7 @@ const ManScreen = () => {
       <h1>Mans</h1>
       <hr></hr>
       {mans.map((personajes) => (
-        <h1>{personajes.name}</h1>
+        <Card key={personajes.id} {...personajes} />
       ))}
     </div>
   );
