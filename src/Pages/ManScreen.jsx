@@ -6,12 +6,14 @@ const ManScreen = () => {
   const mans = Characters.filter((personaje) => personaje.type === "h");
   console.log(mans);
   return (
-    <div className="container mt-3">
+    <div className="container mt-3 ">
       <h1>Mans</h1>
       <hr></hr>
-      {mans.map((personajes) => (
-        <Card key={personajes.id} {...personajes} />
-      ))}
+      <div className="row">
+        {mans.map((personajes) => (
+          <Card key={personajes.id} {...personajes} />
+        ))}
+      </div>
     </div>
   );
 };
