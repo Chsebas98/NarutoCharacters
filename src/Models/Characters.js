@@ -726,7 +726,7 @@ export const Characters = [
     name: "Shikadai Nara",
     description:
       "Es un Chūnin de Konohagakure miembro y heredero del Clan Nara. Forma parte del Equipo Moegi junto a Inojin Yamanaka y Chōchō Akimichi.",
-    type: "",
+    type: "h",
   },
   {
     id: "108",
@@ -965,5 +965,12 @@ export const Characters = [
     description:
       "Shukaku es una de las Bestias con Cola creadas por el Sabio de los Seis Caminos y una bestia que ha estado sellada dentro de tres jinchūrikis a lo largo de su existencia, siendo Gaara, el Quinto Kazekage de Sunagakure, el más reciente. Shukaku fue capturado por la organización Akatsuki a través de Deidara y sellado dentro del Gedō Mazō, luego fue liberado por los esfuerzos combinados de la Gran Alianza Shinobi durante la Cuarta Guerra Mundial Shinobi para, posteriormente, ser re-capturado por Madara. Actualmente se encuentra en libertad después de la derrota y posterior sellamiento de Kaguya.",
     type: "b",
+  },
+  {
+    id: "142",
+    name: "Teyaki Uchiha",
+    description:
+      "Era un miembro del Clan Uchiha. Fue el esposo de Uruchi Uchiha junto a quien atendía el Uchiha Senbei. Teyaki era el tendero de la tienda 'Uchiha Senbei', el proveedor de senbei para el Clan Uchiha. Su tienda había estado en la familia desde la fundación de Konoha. La receta del senbei que dio a la tienda su fama. era un secreto transmitido de generación en generación y fue vigilado de cerca por Teyaki. Fue una de las pocas personas que alentó a Sasuke Uchiha para ser un gran shinobi, en lugar de alabar sólo al hermano mayor de éste, Itachi. Fue asesinado por Itachi la noche de la masacre de su clan.",
+    type: "h",
   },
 ];

@@ -1,19 +1,47 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import queryString from "query-string";
+import { Characters } from "../Models/Characters";
+import Card from "../Components/Card";
 
 const SearchScreen = ({ history }) => {
-  const [inputValue, setInputValue] = useState();
+  const location = useLocation();
+
+  const { query = "" } = queryString.parse(location.search);
+
+  /* console.log(param); */
+
+  const [buscar, setBuscar] = useState(query);
+  const [personaje, setPersonaje] = useState([]);
 
   const handleChange = (e) => {
     const value = e.target.value;
-    setInputValue(value);
+    setBuscar(value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(inputValue);
-    history.push(`?q=${inputValue}`);
+    console.log(buscar);
+    history.push(`?query=${buscar}`);
   };
+
+  const getPersonaje = () => {
+    if (buscar.trim() !== "") {
+      const value = buscar.toLocaleLowerCase();
+      const newValue = Characters.filter((personaje) =>
+        personaje.name.toLowerCase().includes(value)
+      );
+      setPersonaje(newValue);
+    } else {
+      setPersonaje([]);
+    }
+  };
+
+  useEffect(() => {
+    getPersonaje();
+  }, [query]);
+
   return (
     <div className="container">
       <h1>Search Screen</h1>
@@ -29,7 +57,7 @@ const SearchScreen = ({ history }) => {
                 className="form-control"
                 autoComplete="off"
                 type="text"
-                value={inputValue}
+                value={buscar}
                 onChange={handleChange}
               ></input>
             </label>
@@ -38,7 +66,19 @@ const SearchScreen = ({ history }) => {
             </button>
           </form>
         </div>
-        <div className="col-6"></div>
+        {/* BUSQUEDA DE LOS PERSONAJES */}
+        <div className="col-6">
+          <h2>Resultados:{personaje.length}</h2>
+          {personaje.length === 0 && (
+            <div className="alert alert-warning">
+              Porfavor busque un personaje
+            </div>
+          )}
+          {/* Buscar */}
+          {personaje.map((pers) => (
+            <Card key={pers.id} {...pers} />
+          ))}
+        </div>
       </div>
     </div>
   );

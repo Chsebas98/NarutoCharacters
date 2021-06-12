@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <NavLink className="navbar-brand" to="/mans">
+        <NavLink className="navbar-brand" to="/characters">
           <img
             src="/assets/sharinga.png"
             alt=""
@@ -16,8 +16,9 @@ const Navbar = () => {
             height="24"
             className="d-inline-block align-text-top mx-2"
           ></img>
-          Personajes
+          Personajes Naruto
         </NavLink>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -31,6 +32,16 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <NavLink
+                className="nav-link"
+                aria-current="page"
+                activeStyle={{ fontWeight: "bold", color: "#941133" }}
+                to="/characters"
+              >
+                Personajes
+              </NavLink>
+            </li>
             <li className="nav-item">
               <NavLink
                 className="nav-link"
