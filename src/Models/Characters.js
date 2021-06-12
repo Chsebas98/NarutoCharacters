@@ -41,7 +41,7 @@ export const Characters = [
     name: "Cuervo Itachi",
     description:
       "Era el cuervo de Itachi que tenía implantado el Mangekyō Sharingan izquierdo de Shisui Uchiha con el genjutsu más poderoso de todos el 'Kotoamatsukami' ",
-    type: "m",
+    type: "h",
   },
   {
     id: "10",

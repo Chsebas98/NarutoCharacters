@@ -70,11 +70,13 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
-          <div className="d-flex ">
-            <button className="btn btn-danger" onClick={handleLogout}>
-              Cerrar Sesión
-            </button>
-          </div>
+          <NavLink to="/login">
+            <div className="d-flex ">
+              <button className="btn btn-danger" onClick={handleLogout}>
+                Cerrar Sesión
+              </button>
+            </div>
+          </NavLink>
         </div>
       </div>
     </nav>
