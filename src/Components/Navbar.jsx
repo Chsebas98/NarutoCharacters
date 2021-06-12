@@ -1,6 +1,5 @@
 import React from "react";
-import { Link, NavLink, useHistory } from "react-router-dom";
-
+import { NavLink, useHistory } from "react-router-dom";
 const Navbar = () => {
   const history = useHistory();
   const handleLogout = () => {
@@ -9,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/man">
+        <NavLink className="navbar-brand" to="/mans">
           <img
             src="/assets/sharinga.png"
             alt=""
@@ -18,7 +17,7 @@ const Navbar = () => {
             className="d-inline-block align-text-top mx-2"
           ></img>
           Personajes
-        </Link>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -36,7 +35,7 @@ const Navbar = () => {
               <NavLink
                 className="nav-link"
                 aria-current="page"
-                to="/man"
+                to="/mans"
                 activeStyle={{ fontWeight: "bold", color: "#941133" }}
               >
                 Hombres
@@ -70,13 +69,12 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
-          <NavLink to="/login">
-            <div className="d-flex ">
-              <button className="btn btn-danger" onClick={handleLogout}>
-                Cerrar Sesión
-              </button>
-            </div>
-          </NavLink>
+
+          <div className="d-flex ">
+            <button className="btn btn-danger" onClick={handleLogout}>
+              Cerrar Sesión
+            </button>
+          </div>
         </div>
       </div>
     </nav>
