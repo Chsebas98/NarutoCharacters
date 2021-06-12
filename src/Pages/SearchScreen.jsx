@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 
 const SearchScreen = ({ history }) => {
-  const [search, setSearch] = useState();
+  const [inputValue, setInputValue] = useState();
 
   const handleChange = (e) => {
     const value = e.target.value;
-    setSearch(value);
+    setInputValue(value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    history.push(`?search=${search}`);
-  };
 
+    console.log(inputValue);
+    history.push(`?q=${inputValue}`);
+  };
   return (
     <div className="container">
       <h1>Search Screen</h1>
@@ -27,9 +28,9 @@ const SearchScreen = ({ history }) => {
                 placeholder="Nombre del personaje"
                 className="form-control"
                 autoComplete="off"
-                value={search}
-                onChange={handleChange}
                 type="text"
+                value={inputValue}
+                onChange={handleChange}
               ></input>
             </label>
             <button className="btn btn-info w-100" type="submit">
